@@ -30,7 +30,8 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Stacks logo above the navigation items */
+    justify-content: center;
     align-items: center;
     max-width: 1100px;
     margin: auto;
@@ -40,10 +41,14 @@ nav {
 .logo {
     font-size: 26px;
     font-weight: bold;
+    margin-bottom: 10px; /* Adds space between logo and navigation */
 }
 
 nav ul {
     display: flex;
+    justify-content: center; /* Centers the nav items horizontally */
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
