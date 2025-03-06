@@ -176,7 +176,12 @@ h2 {
 #contact button:hover {
     background-color: #68de8a;
 }
-
+/* Instagram Feed */
+.instagram-feed {
+    text-align: center;
+    background-color: #68de8a;
+    padding: 20px;
+}
 /* Footer */
 footer {
     background-color: #b2e435;
