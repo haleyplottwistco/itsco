@@ -265,11 +265,11 @@ h2 {
     border-radius: 10px; /* Optional: adds a modern rounded look */
 }
 }
-/* Footer */
+/* Footer Styles */
 footer {
-    background-color: #b2e435;
-    color: white;
-    text-align: center;
+    background-color: #f1f1f1;
+    color: #333;
     padding: 20px;
-    font-size: 1rem;
+    text-align: center;
+    width: 100%;
 }
