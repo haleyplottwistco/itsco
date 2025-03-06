@@ -6,9 +6,10 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    color: #2c3e50;
+    background-color: #f7f9fc;
 }
 
 a {
@@ -20,53 +21,53 @@ ul {
     list-style-type: none;
 }
 
-/* Navigation styles */
+/* Navigation Styles */
 header {
-    background: #333;
+    background: #2c3e50;
     color: white;
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 nav {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+    max-width: 1100px;
+    margin: auto;
     padding: 0 20px;
 }
 
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
 nav ul {
-    list-style: none;
     display: flex;
-    margin-left: 20px; /* Move menu to the left */
-    padding: 0;
 }
 
 nav ul li {
-    margin-right: 15px; /* Adjust spacing */
+    margin-left: 20px;
 }
 
 nav ul li a {
     color: white;
-    text-decoration: none;
     font-size: 18px;
     padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
 nav ul li a:hover {
-    background: #555;
-    border-radius: 5px;
+    background: #1abc9c;
 }
 
 /* Hero Section */
 #hero {
-    background-color: #34495e;
+    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('hero-image.jpg') center/cover no-repeat;
     color: white;
-    padding: 100px 20px;
     text-align: center;
+    padding: 120px 20px;
 }
 
 #hero .hero-content h1 {
@@ -75,113 +76,110 @@ nav ul li a:hover {
 }
 
 #hero .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 30px;
 }
 
 .cta-button {
-    background-color: #f39c12;
-    padding: 10px 20px;
-    border-radius: 5px;
+    background-color: #1abc9c;
+    padding: 12px 24px;
+    border-radius: 6px;
     font-size: 1.2rem;
     color: white;
-    transition: background-color 0.3s ease;
+    transition: background 0.3s;
 }
 
 .cta-button:hover {
-    background-color: #e67e22;
+    background-color: #16a085;
 }
 
-/* About Section */
-#about {
-    padding: 60px 20px;
-    background-color: #ecf0f1;
+/* Section Styles */
+section {
+    padding: 80px 20px;
     text-align: center;
 }
 
-#about h2 {
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    color: #2c3e50;
 }
 
 /* Services Section */
-#services {
-    padding: 60px 20px;
-}
-
 #services .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 30px;
 }
 
 .service {
-    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 30%;
 }
 
 .service h3 {
     font-size: 1.8rem;
     margin-bottom: 10px;
+    color: #1abc9c;
 }
 
-.service p {
-    font-size: 1.1rem;
-}
-
-/* Testimonials Section */
+/* Testimonials */
 #testimonials {
-    padding: 60px 20px;
     background-color: #ecf0f1;
-    text-align: center;
 }
 
 .testimonial {
-    margin-bottom: 20px;
     font-style: italic;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
 }
 
 .testimonial p:last-child {
     font-weight: bold;
+    margin-top: 10px;
 }
 
-/* Contact Section */
-#contact {
-    padding: 60px 20px;
-}
-
+/* Contact */
 #contact form {
     display: flex;
     flex-direction: column;
     max-width: 600px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 #contact input, #contact textarea {
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
 }
 
 #contact button {
-    background-color: #f39c12;
-    padding: 10px;
+    background-color: #1abc9c;
+    padding: 12px;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 1.2rem;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background 0.3s;
 }
 
 #contact button:hover {
-    background-color: #e67e22;
+    background-color: #16a085;
 }
 
 /* Footer */
 footer {
-    background-color: #34495e;
+    background-color: #2c3e50;
     color: white;
     text-align: center;
     padding: 20px;
