@@ -181,6 +181,10 @@ h2 {
     text-align: center;
     background-color: #68de8a;
     padding: 20px;
+    max-width: 1200px; /* Adjust width as needed */
+    margin: 0 auto; /* Centers the section */
+    border-radius: 10px; /* Optional: adds a modern rounded look */
+}
 }
 /* Footer */
 footer {
