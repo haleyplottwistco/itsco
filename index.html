@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +8,20 @@
     <title>ITSCO - Mental Health Therapy</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Reset some default styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Mobile Friendly Navigation */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
         header {
             background-color: #fff;
-            padding: 10px;
+            padding: 10px 20px;
+            position: relative;
         }
 
         .logo-container {
@@ -52,33 +56,60 @@
             background-color: #68de8a;
         }
 
-        /* Mobile Specific Styles */
+        /* Hamburger menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            height: 3px;
+            width: 25px;
+            background: #1a5d3e;
+            margin: 4px 0;
+            border-radius: 5px;
+        }
+
         @media (max-width: 768px) {
             nav ul {
-                display: block;
-                text-align: center;
-                padding: 10px 0;
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: #fff;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            }
+
+            nav ul.active {
+                display: flex;
             }
 
             nav ul li {
-                margin: 10px 0;
+                margin: 15px 0;
+                text-align: center;
+            }
+
+            .hamburger {
+                display: flex;
             }
 
             .logo-container {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+                flex-direction: row;
+                justify-content: space-between;
             }
 
             .logo-image {
-                margin-bottom: 10px;
+                height: 1.5in;
             }
         }
 
         /* Hero Section */
         #hero {
             background: #fff;
-            padding: 40px;
+            padding: 40px 20px;
             text-align: center;
         }
 
@@ -104,7 +135,9 @@
         }
 
         /* Contact Form */
-        form input, form textarea, form button {
+        form input,
+        form textarea,
+        form button {
             width: 100%;
             padding: 12px;
             margin-bottom: 10px;
@@ -134,14 +167,18 @@
             color: #333;
         }
 
-        /* Mobile Adjustments */
+        /* Additional Mobile Adjustments */
         @media (max-width: 600px) {
-            .slideshow h1 {
+            #hero h1 {
+                font-size: 1.5rem;
+            }
+
+            section h2 {
                 font-size: 1.5rem;
             }
 
             .service h3 {
-                font-size: 1.5rem;
+                font-size: 1.25rem;
             }
 
             .testimonial p {
@@ -150,15 +187,21 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- Navigation -->
     <header>
-        <nav>
-            <div class="logo-container">
-                <img src="ITSCOlogo.png" alt="ITSCO Logo" class="logo-image">
+        <div class="logo-container">
+            <img src="ITSCOlogo.png" alt="ITSCO Logo" class="logo-image">
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <ul>
+        </div>
+        <nav>
+            <ul id="nav-links">
                 <li><a href="#about">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Providers</a></li>
@@ -186,7 +229,7 @@
                 <h1>WE ARE HIRING!</h1>
             </div>
         </div>
-        
+
         <!-- Slideshow Navigation Dots -->
         <div class="slideshow-dots">
             <span class="dot" onclick="currentSlide(1)"></span>
@@ -199,7 +242,7 @@
     <section id="about">
         <div class="container">
             <h2>About Us</h2>
-            <p>At ITSCO, our mission is to democratize access to counseling, ensuring it's within reach for everyone. Born from the passion and dedication of counselors eager to enact positive change in mental health, we've embarked on a journey to break down barriers to therapy. Our inception was marked by a focused initiative: to integrate counseling services seamlessly into the school environment, providing a foundation for children to thrive emotionally and psychologically. Understanding the transformative power of therapy, our aim is crystal clear – to make mental health support universally accessible. ITSCO is not just about offering services; it's about opening doors to a world where every individual, regardless of age, can navigate life's challenges with resilience and grace. Our core offering centers around bespoke counseling solutions for students from kindergarten through high school, directly within their schools. We are committed to unlocking every child's potential, equipping them with robust coping mechanisms, and fostering an environment where mental well-being is prioritized. However, our vision extends beyond the schoolyard. Recognizing that the journey of growth and self-discovery transcends age, ITSCO warmly welcomes individuals from all walks of life to our office in Colorado Springs, CO. Here, we provide a sanctuary for healing, learning, and personal development. At the heart of ITSCO lies a commitment to nurturing the mental health of children, empowering them to excel in every facet of their lives. Our approach is tailor-made, meticulously crafted to meet the unique needs of each child. By focusing on areas that require attention and enhancing inherent strengths, we strive to be catalysts for positive transformation. Join us in our endeavor to shape a future where mental health support is not a privilege but a right for all. Together, let's pave the way for a healthier, more resilient generation.</p>
+            <p>At ITSCO, our mission is to democratize access to counseling...</p>
         </div>
     </section>
 
@@ -237,7 +280,7 @@
         </div>
     </section>
 
-        <!-- Instagram Feed -->
+    <!-- Instagram Feed -->
     <section class="instagram-feed">
         <h2>Latest on Instagram</h2>
         <iframe src="https://www.instagram.com/itscounselors/embed" width="100%" height="400" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
@@ -256,12 +299,15 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2022 ITSCO. All rights reserved.</p>
-        <p>437 Windchime Place, Colorado Springs, CO 80919</p>
-        <p>support@ITSCO.health</p>
+        <p>© 2025 ITSCO - All Rights Reserved</p>
     </footer>
 
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav-links').classList.toggle('active');
+        }
+    </script>
 </body>
+
 </html>
